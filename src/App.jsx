@@ -11,13 +11,13 @@ const fetchPlayer = async() =>{
 function App() {
   const playersPromise = fetchPlayer();
   return (
-    <>
+    <div className='container mx-auto'>
     <NavBar></NavBar>
     <Banner></Banner>
       <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
     <Players playersPromise = {playersPromise}></Players>
     </Suspense>
-    </>
+    </div>
   )
 }
 
